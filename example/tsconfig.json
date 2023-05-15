@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@threls/expo-screen-capture-ios": ["../src/index"],
+      "@threls/expo-screen-capture-ios/*": ["../src/*"]
+    }
+  }
+}
