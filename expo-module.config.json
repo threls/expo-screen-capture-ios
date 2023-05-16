@@ -1,9 +1,6 @@
 {
-  "platforms": ["ios", "android", "web"],
+  "platforms": ["ios"],
   "ios": {
     "modules": ["ExpoScreenCaptureIosModule"]
-  },
-  "android": {
-    "modules": ["threls.expo.modules.screencaptureios.ExpoScreenCaptureIosModule"]
   }
 }

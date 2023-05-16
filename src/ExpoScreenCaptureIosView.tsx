@@ -1,11 +1,6 @@
-import { requireNativeViewManager } from 'expo-modules-core';
 import * as React from 'react';
+import { View, ViewProps } from 'react-native';
 
-import { ExpoScreenCaptureIosViewProps } from './ExpoScreenCaptureIos.types';
-
-const NativeView: React.ComponentType<ExpoScreenCaptureIosViewProps> =
-  requireNativeViewManager('ExpoScreenCaptureIos');
-
-export default function ExpoScreenCaptureIosView(props: ExpoScreenCaptureIosViewProps) {
-  return <NativeView {...props} />;
+export default function ExpoScreenCaptureIosView(props: ViewProps) {
+  return <View {...props} />;
 }

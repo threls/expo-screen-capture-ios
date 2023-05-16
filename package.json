@@ -1,6 +1,6 @@
 {
   "name": "@threls/expo-screen-capture-ios",
-  "version": "0.1.0",
+  "version": "0.1.0-4",
   "description": "Prevent screen capture on iOS devices",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -21,13 +21,13 @@
     "@threls/expo-screen-capture-ios",
     "ExpoScreenCaptureIos"
   ],
-  "repository": "https://github.com/threls/expo-screen-capture-ios/threls-expo-screen-capture-ios",
+  "repository": "https://github.com/threls/expo-screen-capture-ios",
   "bugs": {
-    "url": "https://github.com/threls/expo-screen-capture-ios/threls-expo-screen-capture-ios/issues"
+    "url": "https://github.com/threls/expo-screen-capture-ios/issues"
   },
-  "author": "ghili <gary@threls.com> (https://github.com/threls/expo-screen-capture-ios)",
+  "author": "ghili <gary@threls.com> (https://github.com/garyThrels)",
   "license": "MIT",
-  "homepage": "https://github.com/threls/expo-screen-capture-ios/threls-expo-screen-capture-ios#readme",
+  "homepage": "https://github.com/threls/expo-screen-capture-ios#readme",
   "dependencies": {},
   "devDependencies": {
     "@types/react": "^18.0.25",
