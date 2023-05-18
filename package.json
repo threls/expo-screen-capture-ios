@@ -1,6 +1,6 @@
 {
   "name": "@threls/expo-screen-capture-ios",
-  "version": "0.1.0-4",
+  "version": "0.1.0",
   "description": "Prevent screen capture on iOS devices",
   "main": "build/index.js",
   "types": "build/index.d.ts",
