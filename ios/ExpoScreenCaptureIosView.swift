@@ -29,13 +29,8 @@ private extension UIView {
         self.addSubview(field)
         self.layer.superlayer?.addSublayer(field.layer)
         field.layer.sublayers?.first?.addSublayer(self.layer)
+        field.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        field.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         
-        NSLayoutConstraint.activate([
-            field.topAnchor.constraint(equalTo: self.topAnchor),
-            field.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            field.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            field.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-        ])
-
     }
 }
