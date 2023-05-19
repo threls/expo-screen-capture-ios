@@ -14,6 +14,7 @@ class ExpoScreenCaptureIosView: ExpoView {
             let field = UITextField()
             field.isSecureTextEntry = true
             field.isUserInteractionEnabled = false
+            field.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(field)
             field.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
             field.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true

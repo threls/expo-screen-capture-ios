@@ -56,12 +56,19 @@ First go ahead and clone the repository, then to get things start
 git clone https://github.com/threls/expo-screen-capture-ios
 ```
 
+Proceed to installing the node modules
+
+```
+cd ./expo-screen-capture-ios
+yarn install
+```
+
 Then you can proceed to the example folder to install, build and start our example project.
 
 Lets move into the example folder and install the example's iOS dependencies using pods.
 
 ```
-cd ./expo-screen-capture-ios/example
+cd ./example
 npx pod-install
 ```
 
