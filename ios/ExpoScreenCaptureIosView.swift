@@ -9,21 +9,35 @@ class ExpoScreenCaptureIosView: ExpoView {
         super.init(appContext: appContext)
     }
     
-    func makeSecure() {
-        DispatchQueue.main.async {
-            let field = UITextField()
-            field.isSecureTextEntry = true
-            field.isUserInteractionEnabled = false
-            field.translatesAutoresizingMaskIntoConstraints = false
-            self.addSubview(field)
-            field.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-            field.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            self.layer.superlayer?.addSublayer(field.layer)
-            field.layer.sublayers?.first?.addSublayer(self.layer)
-        }
-    }
-    
     override func didMoveToSuperview() {
         makeSecure()
+    }
+}
+
+private extension UIView {
+    func makeSecure() {
+        guard superview != nil else {
+            //to avoid layer cyclic crash, when it is a topmost view
+            for subview in subviews {
+                subview.makeSecure()
+            }
+            return
+        }
+        let field = UITextField()
+        field.isSecureTextEntry = true
+        field.isUserInteractionEnabled = false
+        self.addSubview(field)
+        field.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        field.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        self.layer.superlayer?.addSublayer(field.layer)
+        field.layer.sublayers?.first?.addSublayer(self.layer)
+        
+        NSLayoutConstraint.activate([
+            field.topAnchor.constraint(equalTo: self.topAnchor),
+            field.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            field.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            field.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+        ])
+
     }
 }
