@@ -27,8 +27,6 @@ private extension UIView {
         field.isSecureTextEntry = true
         field.isUserInteractionEnabled = false
         self.addSubview(field)
-        field.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        field.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         self.layer.superlayer?.addSublayer(field.layer)
         field.layer.sublayers?.first?.addSublayer(self.layer)
         
